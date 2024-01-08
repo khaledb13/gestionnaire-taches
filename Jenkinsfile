@@ -20,6 +20,8 @@ pipeline {
         }
 
         stage('Build & Push'){
+            def dockerfilePath = "paper-kit-2-angular-master/Dockerfile"
+docker.build("votre-image:tag", "-f ${dockerfilePath} .")
             agent any
             steps {
                 sh 'docker build -t $DOCKERHUB_CREDENTIALS_USR/anime-hub:$BUILD_ID .'
