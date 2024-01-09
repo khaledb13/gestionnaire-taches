@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: plant-management-front
-          image: soussisalma/frontend:22
+          image: khaledb13/frontend:22
           ports:
             - containerPort: 80
       imagePullSecrets:
